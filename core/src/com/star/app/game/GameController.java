@@ -53,6 +53,10 @@ public class GameController {
     }
 
     public void update(float dt) {
+
+//        while (background.update2(dt)) {
+//            background.update2(dt);
+//        }
         background.update(dt);
         hero.update(dt);
         asteroidController.update(dt);
@@ -60,7 +64,11 @@ public class GameController {
         powerUpsController.update(dt);
         particleController.update(dt);
         checkCollisions();
+//        chekPutButton();
     }
+
+//    private void chekPutButton() {
+//    }
 
     public void checkCollisions() {
         for (int i = 0; i < asteroidController.getActiveList().size(); i++) {
