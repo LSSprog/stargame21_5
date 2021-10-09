@@ -60,7 +60,7 @@ public class Hero {
         this.velocity = new Vector2(0, 0);
         this.angle = 0.0f;
         this.enginePower = 500.0f;
-        this.hp = 100;
+        this.hp = 10;
         this.stringBuilder = new StringBuilder();
         this.hitArea = new Circle(position, 26);
         this.currentWeapon = new Weapon(
@@ -90,6 +90,9 @@ public class Hero {
 
     public void takeDamage(int amount) {
         hp -= amount;
+        if (hp < 0) {
+            ScreenManager.getInstance().changeScreen(ScreenManager.ScreenType.OVER);
+        }
     }
 
     public void consume(PowerUp p) {
