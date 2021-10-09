@@ -11,4 +11,10 @@ public class DesktopLauncher {
 		config.height = 720;
 		new LwjglApplication(new StarGame(), config);
 	}
+
+//	1. Разобраться с кодом
+//  2. Кнопка паузы и выхода в меню на игровом экране.
+//  3. * Сделать GameOverScreen. Если HP < 0 то игра должна перейти в GameOverScreen, и отображать там статистику ( можно счет )
+//
+//	По нажатию на экране GameOverScreen возвращаемся в экран меню
 }
